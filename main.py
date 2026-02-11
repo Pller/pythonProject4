@@ -3,9 +3,9 @@ from src.category import Category
 
 
 def main():
-    # Пример использования
-    phone = Product("iPhone 15", 99999, 25)
-    laptop = Product("MacBook Pro", 199999, 15)
+    # Пример использования с исправленным Product
+    phone = Product("iPhone 15", 99999, 25, "Смартфон Apple")
+    laptop = Product("MacBook Pro", 199999, 15, "Ноутбук Apple")
 
     print("Продукты:")
     print(phone)

@@ -1,14 +1,16 @@
-from src.product import Product
-
-
 class Category:
-    def __init__(self, name, products):
+    category_count = 0
+    product_count = 0
+
+    def __init__(self, name, description, products):
         self.name = name
+        self.description = description
         self.__products = products
+        Category.category_count += 1
+        Category.product_count += len(products)
 
     def __str__(self):
-        total_quantity = sum(product.quantity for product in self.__products)
-        return f"{self.name}, количество продуктов: {total_quantity} шт."
+        return f"{self.name}, количество продуктов: {len(self.__products)} шт."
 
     @property
     def products(self):

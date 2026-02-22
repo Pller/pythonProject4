@@ -1,9 +1,9 @@
 class Product:
-    def __init__(self, name, price, quantity, description=""):
+    def __init__(self, name, description, price, quantity):
         self.name = name
+        self.description = description
         self.price = price
         self.quantity = quantity
-        self.description = description
 
     def __str__(self):
         return f"{self.name}, {self.price} руб. Остаток: {self.quantity} шт."
